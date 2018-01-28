@@ -1,0 +1,24 @@
+    5  pwd
+   10  date
+#For Installing chef.At the time of writing, it was 2.0.28
+   11  curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable -v 2.0.28
+   19  chef -v
+   21  hostname
+   22  whoami
+   23  vi readme.txt
+   25  mkdir ~/chef-repo
+   27  cd ~/chef-repo/
+   34  vi hello.rb
+   42  chef-client --local-mode hello.rb
+   50  chef-client --local-mode webserver.rb 
+   51  sudo chef-client --local-mode webserver.rb 
+   56  sudo chef-client --local-mode webserver.rb
+   67  mv chef-repo learnChef/
+#Standard Way   
+   77  chef generate cookbook cookbooks/learn_chef_httpd
+#Standard way of installing anything. If you are with in a restricted network, it will only work, if the package is available in satellite.
+   85  sudo yum install tree -y
+   87  tree cookbooks
+#more Refer chef Api.
+   88  chef generate template cookbooks/learn_chef_httpd index.html
+  105  vi recipes/default.rb 
